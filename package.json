@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "setup-shadcn": "npx shadcn@latest init --force",
-    "aceternity-build": "npx aceternity-ui@latest init",
+    "aceternity-build": "npx aceternity-ui@latest init --force",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
