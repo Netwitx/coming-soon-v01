@@ -3,11 +3,9 @@ frontend:
   phases:
     preBuild:
       commands:
-        - npm install
-        - npm run setup-shadcn
+        - npm install --legacy-peer-deps
     build:
       commands:
-        - npm run aceternity-build
         - npm run build
   artifacts:
     baseDirectory: .next
