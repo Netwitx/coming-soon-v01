@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import  Head  from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,7 +16,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "NETWITX.com | Coming soon",
-  description: "Next Generation of Web Development to make your game easier, Stay tuned!",
+  description:
+    "Next Generation of Web Development to make your game easier, Stay tuned!",
 };
 
 export default function RootLayout({
@@ -25,6 +27,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        {/* Google Analytics Tracking Code */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-CRR85NJKFN`}
+        ></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-CRR85NJKFN  ');
+          `}
+        </script>
+      </Head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
